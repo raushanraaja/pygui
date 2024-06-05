@@ -3,13 +3,14 @@ from threading import Thread
 from time import sleep
 
 
-
+# Method that shold return actual values
 def get_values():
     import random
     import string
     return [''.join(random.choices(string.ascii_uppercase + string.digits, k=30)) for _ in range(3)]
 
 
+# Method that should get the values and update the inputs
 def update_inputs():
     while True:
         values = get_values()
